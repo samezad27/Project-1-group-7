@@ -33,12 +33,12 @@ function searchWeatherByLatLng(lat, lon){
     }).then(function(data){
         //here I'm getting the one call data, need to now convert to view
         console.log(data);})
-        displayWeatherData(data)
+        // displayWeatherData(data)
 }
 
-function displayWeatherData(weatherData){
+// function displayWeatherData(weatherData){
 
-}
+// }
 
 
 //get api key when application starts
