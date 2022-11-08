@@ -96,7 +96,13 @@ function travelType() {
        type = travelTypeEl.val();
       //call next step
       console.log(type);
+      whatToPack();
     });
+  }
+
+  function whatToPack() {
+    contentContainerEl.html(` <h3>This is what you should pack</h3>`);
+    
   }
 
 //get api key when application starts
