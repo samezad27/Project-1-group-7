@@ -7,17 +7,130 @@
 
     <link rel="stylesheet" href="./bootstrap.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js "></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
-    <style>
-    </style>
+    <style></style>
   </head>
   <body>
     <div class="content rounded shadow-lg">
-        <h3>Where are you going? </h3>
+      <h3>Where are you going?</h3>
 
-        <input type="text" id="cityInput">
-        <button type="button" class="btn btn-primary" id="searchBtn">Next</button>
+      <input type="text" id="cityInput" />
+      <button type="button" class="btn btn-primary" id="searchBtn">Next</button>
+    </div>
+    <!-- 
+
+jackiezen.com
+
+Drawn and animated with CSS and jQuery
+
+Drag luggage trolley left and right.
+Luggages in the trolley can be dragged and rearranged.
+
+
+-->
+
+    <div id="container">
+      <div id="trolley">
+        <!-- TROLLEY PARTS IN HERE -->
+        <div id="trolley-frame">
+          <div id="trolley-top">
+            <div id="trolley-rod"></div>
+          </div>
+          <div id="trolley-wheels">
+            <div id="wheel1"></div>
+            <div id="wheel2"></div>
+          </div>
+        </div>
+
+        <!-- TROLLEY PARTS END HERE -->
+
+        <!-- LUGGAGES IN HERE -->
+
+        <ul id="sortable">
+          <div id="luggage-container">
+            <!-- GRAY LUGGAGE-->
+            <li>
+              <div id="luggage-gray-container" class="active">
+                <div id="luggage-gray">
+                  <div id="luggage-gray-corners-bottom"></div>
+                  <div id="luggage-gray-corners-top"></div>
+                  <div id="luggage-gray-keyhole-left"></div>
+                  <div id="luggage-gray-keyhole-right"></div>
+
+                  <div id="luggage-gray-lock-left"></div>
+                  <div id="luggage-gray-keyhole-left"></div>
+
+                  <div id="luggage-gray-lock-right"></div>
+                  <div id="luggage-gray-keyhole-right"></div>
+                  <div id="luggage-gray-handle"></div>
+                </div>
+              </div>
+            </li>
+            <!-- END OF GRAY LUGGAGE-->
+
+            <!-- ORANGE LUGGAGE-->
+            <li>
+              <div id="luggage-orange-container">
+                <div id="luggage-orange">
+                  <div id="luggage-orange-corners-bottom"></div>
+                  <div id="luggage-orange-corners-top"></div>
+                  <div id="luggage-orange-straps"></div>
+                  <div id="luggage-orange-lock"></div>
+                  <div id="luggage-orange-keyhole"></div>
+                </div>
+              </div>
+            </li>
+            <!-- END OF ORANGE LUGGAGE-->
+
+            <!-- YELLOW LUGGAGE-->
+            <li>
+              <div id="luggage-yellow-container">
+                <div id="luggage-yellow">
+                  <div id="luggage-yellow-line"></div>
+                  <div id="luggage-yellow-handle"></div>
+                  <div id="luggage-yellow-lock-left"></div>
+                  <div id="luggage-yellow-lock-right"></div>
+                </div>
+              </div>
+            </li>
+
+            <!-- END OF YELLOW LUGGAGE-->
+
+            <!-- BLUE LUGGAGE-->
+            <li>
+              <div id="luggage-blue-container">
+                <div id="luggage-blue">
+                  <div id="luggage-blue-corners-bottom"></div>
+                  <div id="luggage-blue-corners-top"></div>
+                  <div id="luggage-blue-straps"></div>
+                  <div id="luggage-blue-handle-back"></div>
+                  <div id="luggage-blue-handle"></div>
+                </div>
+              </div>
+            </li>
+            <!-- END OF BLUE LUGGAGE-->
+
+            <!-- RED LUGGAGE-->
+            <li>
+              <div id="luggage-red-container">
+                <div id="luggage-red">
+                  <div id="luggage-red-corners-bottom"></div>
+                  <div id="luggage-red-corners-top"></div>
+                  <div id="luggage-red-keyhole-left"></div>
+                  <div id="luggage-red-keyhole-right"></div>
+                  <div id="luggage-red-handle"></div>
+                </div>
+              </div>
+            </li>
+            <!-- END OF RED LUGGAGE-->
+          </div>
+        </ul>
+
+        <!-- LUGGAGES END HERE -->
+      </div>
     </div>
     <script src="script.js"></script>
   </body>
