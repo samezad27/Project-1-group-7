@@ -130,6 +130,7 @@ function whatToPack() {
     //this packs some items based on travel type
     packTravelType();
     packRain();
+    packTemperature();
 
 
     //TODO -- after doing what to pack, display them
@@ -148,17 +149,34 @@ function packTravelType(){
     }else if(type === "Business") {
         whatToPackItems.push({name: "Dress Shoes", quantity: 1})
     }else {
-        //other one
+        whatToPackItems.push({name: "Running Shoes", quantity: 1})
     }
 }
 
 function packRain(){
     var isRaining = weatherForcast.temp < weatherForcast.dew_point;
     if(isRaining){
-        //do raining stuff
+        whatToPackItems.push({name: "Umbrella", quantity: 1}, {name: "Rain Jacket", quantity: 1})
+        
     }else{
-        //do no raining stuff
+        //whatToPackItems.push({name: "No Rain!"})
+        contentContainerEl.append(`
+        <h5>Lucky for you! No rain expected during your travels.</h5>
+        `)
+
     }
+}
+
+function packTemperature(){
+    if(weatherForcast.temp<30){
+        whatToPackItems.push({name: "Winter Hat", quantity: 1},{name: "Scarf", quantity: 1},{name: "Thermals", quantity: 1})
+    }else if(weatherForcast.temp>30.1 && weatherForcast.temp<60){
+        whatToPackItems.push({name: "Thermals", quantity: 1})
+    }else if(weatherForcast.temp>80){
+        whatToPackItems.push({name: "Sandals", quantity: 1},{name: "Swimsuit", quantity: 1},{name: "Shorts", quantity: 1},{name: "SPF-100", quantity: 1})
+
+    }
+
 }
 
 //get api key when application starts
