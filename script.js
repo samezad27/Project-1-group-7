@@ -10,7 +10,10 @@ var weatherForcast;
 var dateOfTravel;
 var duration;
 var apikey;
-var Type;
+var type;
+var cityName;
+var isRaining;
+var whatToPackItems = [];
 
 function getApiKey() {
   $("#luggage-container").sortable({
@@ -37,6 +40,7 @@ function searchCity(city) {
     })
     .then(function (data) {
       console.log(data);
+      cityName = data[0].local_names.en
       //get back geocode data here
       var lon = data[0].lon;
       var lat = data[0].lat;
@@ -53,9 +57,10 @@ function searchWeatherByLatLng(lat, lon) {
     .then(function (data) {
       //here I'm getting the one call data, need to now convert to view
       //save this data globally
-      console.log(data);
+      console.log(data)
       weatherForcast = data.current;
       travelDatesQuestion();
+      console.log(weatherForcast)
     });
   //   displayWeatherData(data)
 }
@@ -105,19 +110,73 @@ function travelType() {
       </select>
       <button type="button" class="btn btn-primary" id="travelTypeBtn">Next</button>`);
 
-  var travelTypeEl = $("#travelTypeInput");
-
   $("#travelTypeBtn").click(function () {
-    type = travelTypeEl.val();
-    //call next step
-    console.log(type);
+    type = $("#travelTypeInput option:selected").text()
     whatToPack();
   });
 }
 
 function whatToPack() {
-  contentContainerEl.html(` <h3>This is what you should pack</h3>`);
-  //write logic for what to pack using if statements
+    //first list all data collected
+    console.log("you're going to  ---- ", cityName);
+    console.log("you're traveling for --- ", duration, " days");
+    console.log("Travel type is --- ", type);
+ 
+   
+
+    contentContainerEl.html(` <h3>This is what you should pack</h3>`);
+    //write logic for what to pack using if statements
+    //INSERT IF STATEMENTS HERE ---- 
+    //this packs some items based on travel type
+    packTravelType();
+    packRain();
+    packTemperature();
+
+
+    //TODO -- after doing what to pack, display them
+    for(var i = 0 ; i< whatToPackItems.length; i ++){
+        var item = whatToPackItems[i];
+        contentContainerEl.append(`
+        <h5>${item.name} x ${item.quantity}</h5>
+        `)
+        console.log("your item");
+    }
+}
+
+function packTravelType(){
+    if(type === "Adventure"){
+        whatToPackItems.push({name: "Hiking Boots", quantity: 1});
+    }else if(type === "Business") {
+        whatToPackItems.push({name: "Dress Shoes", quantity: 1})
+    }else {
+        whatToPackItems.push({name: "Running Shoes", quantity: 1})
+    }
+}
+
+function packRain(){
+    var isRaining = weatherForcast.temp < weatherForcast.dew_point;
+    if(isRaining){
+        whatToPackItems.push({name: "Umbrella", quantity: 1}, {name: "Rain Jacket", quantity: 1})
+        
+    }else{
+        //whatToPackItems.push({name: "No Rain!"})
+        contentContainerEl.append(`
+        <h5>Lucky for you! No rain expected during your travels.</h5>
+        `)
+
+    }
+}
+
+function packTemperature(){
+    if(weatherForcast.temp<30){
+        whatToPackItems.push({name: "Winter Hat", quantity: 1},{name: "Scarf", quantity: 1},{name: "Thermals", quantity: 1})
+    }else if(weatherForcast.temp>30.1 && weatherForcast.temp<60){
+        whatToPackItems.push({name: "Thermals", quantity: 1})
+    }else if(weatherForcast.temp>80){
+        whatToPackItems.push({name: "Sandals", quantity: 1},{name: "Swimsuit", quantity: 1},{name: "Shorts", quantity: 1},{name: "SPF-100", quantity: 1})
+
+    }
+
 }
 
 //get api key when application starts
