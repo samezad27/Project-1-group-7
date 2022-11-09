@@ -9,7 +9,33 @@ body {
 .content {
   width: 30%;
   height: 300px;
-  background-color: green;
+  background-color: #557b84;
+  text-align: center;
+  padding-top: 20px;
+}
+
+@media only screen and (max-width: 200000px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    float: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 50%;
+  }
 }
 
 /* 
@@ -17,11 +43,11 @@ This is the suitcase CSS
 */
 
 #container {
-  width: 800px;
+  /* width: 800px; */
   height: 500px;
-  background-color: #e1e8f2;
-  margin-left: auto;
-  margin-right: auto;
+  /* background-color: #e1e8f2; */
+  /* margin-left: auto;
+  margin-right: auto; */
   margin-top: 50px;
 }
 
