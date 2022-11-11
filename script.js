@@ -133,9 +133,12 @@ function whatToPack() {
     //write logic for what to pack using if statements
     //INSERT IF STATEMENTS HERE ---- 
     //this packs some items based on travel type
+    packALways();
+    packDaysTraveled();
     packTravelType();
-    packRain();
     packTemperature();
+    packRain();
+    
 
 
     //TODO -- after doing what to pack, display them
@@ -182,6 +185,26 @@ function packTemperature(){
 
     }
 
+}
+
+function packDaysTraveled (){
+    if(duration === "1"){
+      whatToPackItems.push({name: "Shirt", quantity: 1},{name: "Pairs of socks", quantity: 1},{name: "Underwear", quantity: 1})
+    }else if(duration === "2"){
+      whatToPackItems.push({name: "Shirt", quantity: 2},{name: "Pairs of socks", quantity: 2},{name: "Underwear", quantity: 2})
+    }else if(duration === "3"){
+      whatToPackItems.push({name: "Shirt", quantity: 3},{name: "Pairs of socks", quantity: 3},{name: "Underwear", quantity: 3})
+    }else if(duration === "4"){
+      whatToPackItems.push({name: "Shirt", quantity: 4},{name: "Pairs of socks", quantity: 4},{name: "Underwear", quantity: 4})
+    }else if(duration === "5"){
+      whatToPackItems.push({name: "Shirt", quantity: 5},{name: "Pairs of socks", quantity: 5},{name: "Underwear", quantity: 5})
+    }else{
+      whatToPackItems.push({name: "Shirt", quantity: 5},{name: "Pairs of socks", quantity: 5},{name: "Underwear", quantity: 5})
+    }
+}
+
+function packALways () {
+    whatToPackItems.push({name: "Toothbrush", quantity: 1},{name: "Water Bottle", quantity: 1},{name: "Floss", quantity: 1},{name: "Pants", quantity: 1},{name: "Jacket", quantity: 1})
 }
 
 //get api key when application starts
