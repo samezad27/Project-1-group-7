@@ -69,7 +69,7 @@ function travelDatesQuestion() {
   grayLuggage.removeClass("active");
   orangeLuggage.addClass("active");
   contentContainerEl.html(` <h3>What day are you travelling?</h3>
-<input type="date" id="dateInput">
+<input type="date" min="${moment().format("YYYY-MM-DD")}" id="dateInput">
 <button type="button" class="btn btn-primary" id="dateBtn">Next</button>`);
 
   var dateEl = $("#dateInput");
@@ -80,6 +80,8 @@ function travelDatesQuestion() {
     if (!dateTravel) {
       return;
     }
+
+    
     //more validation for past dates or soemthing if you want
     console.log("date", dateTravel);
     dateOfTravel = dateTravel;
@@ -129,7 +131,7 @@ function whatToPack() {
    
     blueLuggage.removeClass("active");
     redLuggage.addClass("active");
-    contentContainerEl.html(` <h3>This is what you should pack</h3>`);
+    contentContainerEl.html(` <h3>This is what you should pack:</h3>`);
     //write logic for what to pack using if statements
     //INSERT IF STATEMENTS HERE ---- 
     //this packs some items based on travel type
@@ -169,7 +171,7 @@ function packRain(){
     }else{
         //whatToPackItems.push({name: "No Rain!"})
         contentContainerEl.append(`
-        <h5>Lucky for you! No rain expected during your travels.</h5>
+        <h5>Lucky for you, no rain expected.</h5>
         `)
 
     }

@@ -7,11 +7,22 @@ body {
 }
 
 .content {
-  width: 30%;
-  height: 300px;
+  width: 25%;
+  height: 500px;
   background-color: #557b84;
   text-align: center;
   padding-top: 20px;
+  
+}
+
+#cityInput {
+   
+
+}
+
+#searchBtn {
+   
+    
 }
 
 @media only screen and (max-width: 200000px) {
