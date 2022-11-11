@@ -1112,3 +1112,114 @@ This is the suitcase CSS
    95% { transform: rotate(-5deg); }
   100% { transform: rotate(0deg); }
 }
+
+body {
+  background-color: lightblue;   
+}
+
+.plane {
+  position: absolute;
+  color: grey;
+  animation: flying 6s infinite; 
+}
+.plane1 {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  animation: flying 11s infinite;
+  color: red;
+}
+.plane2 {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  animation: flying 10s infinite;
+  color: yellow;
+}
+.plane3 {
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  animation: flying 8s infinite;
+  color: brown;
+}
+.fa-cloud {
+  color: white;
+margin: 30px;
+ 
+}
+
+ .c2 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+   animation: cloud 15s infinite; 
+}
+.c3 {
+  position: absolute;
+  top:30px;
+  left: 550px;
+   animation: cloud 25s infinite; 
+}
+.c5 {
+  position: absolute;
+  top:70px;
+  left:750px;
+   animation: cloud 25s infinite;
+}
+
+.c6 {
+  position: absolute;
+  top: -10px;
+  left: 400px;
+   animation: cloud 25s ese-in infinite; 
+} 
+.c7 {
+  position:absolute;
+  top: 50px;
+  left: 700px;
+   animation: cloud 15s infinite; 
+} 
+    @keyframes flying {
+        0% {
+            left: -45%;
+        }
+        10% {
+            bottom: 30%;
+        }
+        20% {
+            transform: scale(1.0) rotateZ(-5deg);
+            bottom: 15%
+        }
+        25% {
+            transform: scale(1.3) rotateZ(10deg);
+        }
+        40% {
+            transform: scale(0.5) rotateZ(-5deg);
+        }
+        50% {
+            transform: scale(0.3) rotateZ(0deg);
+        }
+        100% {
+            left: 110%;
+            bottom: 30%;
+            transform: scale(1.5) rotateZ(0deg);
+        }
+      
+    }
+  
+@keyframes cloud{
+ 100% {
+    transform:  translateX(-110%);
+   left: 0%;
+  }
+  80% {
+    transform:  translateX(-80%);
+    left:30%;
+  }
+  -70% {
+    transform:  translateX(-50%);
+    left:50%;
+  }
+}
+ 
