@@ -88,6 +88,8 @@ function travelDatesQuestion() {
 }
 
 function travelDuration() {
+  orangeLuggage.removeClass("active");
+  yellowLuggage.addClass("active");
   contentContainerEl.html(` <h3>How many days are you traveling</h3>
     <input id="durationInput" min=0 max=30 type="number"/>
     <button type="button" class="btn btn-primary" id="durationBtn">Next</button>`);
@@ -102,6 +104,8 @@ function travelDuration() {
 }
 
 function travelType() {
+  yellowLuggage.removeClass("active");
+  blueLuggage.addClass("active");
   contentContainerEl.html(` <h3>What type of travel?</h3>
       <select id="travelTypeInput">
         <option>Adventure</option>
@@ -123,7 +127,8 @@ function whatToPack() {
     console.log("Travel type is --- ", type);
  
    
-
+    blueLuggage.removeClass("active");
+    redLuggage.addClass("active");
     contentContainerEl.html(` <h3>This is what you should pack</h3>`);
     //write logic for what to pack using if statements
     //INSERT IF STATEMENTS HERE ---- 
