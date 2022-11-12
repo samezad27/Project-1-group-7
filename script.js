@@ -144,7 +144,7 @@ function whatToPack() {
 
 
     //TODO -- after doing what to pack, display them
-    for(var i = 0 ; i< whatToPackItems.length; i ++){
+    for(var i = 0 ; i< whatToPackItems.length; i++){
         var item = whatToPackItems[i];
         contentContainerEl.append(`
         <h5>${item.name} x ${item.quantity}</h5>
