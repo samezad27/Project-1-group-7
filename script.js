@@ -147,7 +147,7 @@ function whatToPack() {
     for(var i = 0 ; i< whatToPackItems.length; i++){
         var item = whatToPackItems[i];
         contentContainerEl.append(`
-        <h5>${item.name} x ${item.quantity}</h5>
+        <h4>${item.name} x ${item.quantity}</h4>
         `)
         console.log("your item");
     }
@@ -171,7 +171,7 @@ function packRain(){
     }else{
         //whatToPackItems.push({name: "No Rain!"})
         contentContainerEl.append(`
-        <h5>Lucky for you, no rain expected.</h5>
+        <h4>Lucky for you, no rain expected.</h4>
         `)
 
     }
