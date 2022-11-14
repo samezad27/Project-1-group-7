@@ -11,12 +11,11 @@ OpenWeather API
 Bootstrap
 HTML/CSS
 
-## Screenshot of deployed application
+## Usage
 Here is a picture of the deployed website:
 
 images\CarryOn Main.JPG
 
-## Usage
 Once you input your destination and other information, the application will display a results page similar to this:
 
 ./images/CarryOn Results.JPG
