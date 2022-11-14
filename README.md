@@ -8,12 +8,11 @@ Carry On is an application that can tell you what to pack based on your travel d
 ## Visuals
 Here is a picture of the deployed website:
 
-images\CarryOn Main.JPG
+![CarryOn Main](https://user-images.githubusercontent.com/113863838/201611489-6c3918ca-54e0-4760-9329-dcd5057952ae.JPG)
 
 Once you input your destination and other information, the application will display a results page similar to this:
 
-./images/CarryOn Results.JPG
-
+![CarryOn Results](https://user-images.githubusercontent.com/113863838/201611671-c889a108-66ea-4879-b0e5-5febce9cfb9c.JPG)
 
 ## Installation
 
