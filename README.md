@@ -20,7 +20,7 @@ Here is a picture of the deployed website:
 
 Once you input your destination and other information, the application will display a results page similar to this:
 
-./images/CarryOn Results.JPG
+![CarryOn Results](https://user-images.githubusercontent.com/113863838/201611671-c889a108-66ea-4879-b0e5-5febce9cfb9c.JPG)
 
 ## Credit
 - Samuel Ezad
