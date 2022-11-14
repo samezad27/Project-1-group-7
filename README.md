@@ -1,32 +1,30 @@
 # CarryOn
 
 ## Description
+This application  can tell the user what to pack based on the user's input of travel destination, dates, and a few other important pieces of information. Often times, we tend to overpack or even underpack when traveling to new places. Packing a carry on luggage can be tough, therefore this application makes it simple and provide the user the essentials that will fit in their bag and service the needs of their trip. Based on the user's input, the application will give a list of items that will let users know what to bring based on the occasion of the trip, as well as typical items needed to bring on a trip. 
 
-Carry On is an application that can tell you what to pack based on your travel destination, dates, and a few other important pieces of information. Packing a carry on luggage can be tough, and it's easy to forget some essentials when you're packing in a hurry. We make it simple and provide you the essentials that will fit in your bag and service the needs of your trip. 
+## Technologies Used
+JavaScript
+jQuery
+Moment.js
+OpenWeather API
+Bootstrap
+HTML/CSS
 
-
-## Visuals
+## Screenshot of deployed application
 Here is a picture of the deployed website:
 
 images\CarryOn Main.JPG
 
+## Usage
 Once you input your destination and other information, the application will display a results page similar to this:
 
 ./images/CarryOn Results.JPG
 
+## Link to deployed application
 
-## Installation
-
-
-## Usage
-<!-- Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README. -->
-
-
-## Contributing
-<!-- State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self. -->
-
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+## Credit
+Samuel Ezad
+Nathan Nguyen
+David Martin
+Diana Nguyen
